@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>đăng nhập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="dangnhap.css"> 
+</head>
+<body>
+    <header>
+        <nav class="menu-bar">
+            <div class="logo">
+                <i class="fab fa-apple" style="font-size: 20px; color: #000000;"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Cửa Hàng</a></li>
+                <li><a href="#">Mac</a></li>
+                <li><a href="iPad.html">iPad</a></li>
+                <li><a href="iPhone.html">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">AirPods</a></li>
+                <li><a href="#">TV & Nhà</a></li>
+                <li><a href="#">Giải Trí</a></li>
+                <li><a href="#">Phụ Kiện</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+            </ul>
+            <div class="additional-items">
+                <div class="item">
+                    <i class="ri-search-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="hinh1">
+        <h2>Đăng nhập để thanh toán nhanh hơn.</h2>
+        <p>Đăng nhập vào Apple Store</p>
+        <div class="login">
+            <div class="input-container">
+                <input type="text" id="email-phone" placeholder="Email hoặc số điện thoại">
+                <button id="next-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" fill="rgba(163,160,160,1)">
+                        <path d="M12 11V8L16 12L12 16V13H8V11H12ZM12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="password-container" class="hidden">
+                <input type="password" id="password" placeholder="Mật khẩu">
+                <button id="submit-button" onclick="window.location.href='index.html'" class="hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" fill="rgba(163,160,160,1)">
+                        <path d="M12 11V8L16 12L12 16V13H8V11H12ZM12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox">
+                <label>Lưu ID Apple</label>
+            </div>
+        </div>
+
+     <a class="hinh1-text2" href="#">bạn quên đã quên mật khẩu</a> 
+     <div class="hinh1-text">
+        <p>Bạn không có ID Apple? <a href="#">Tạo tài khoản của bạn ngay bây giờ.</a></p>
+     </div>
+     
+        
+    </div>
+    <script src="dangnhap.js"></script>
+</body>
+</html>

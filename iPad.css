@@ -1,0 +1,930 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css');
+
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background: rgba(20,19,24,255);
+}
+.menu-bar {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: rgba(34, 34, 34, 0.8); 
+    width: 100%; 
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding: 10px;
+}
+  
+.menu-items {
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+  
+.logo {
+    display: inline-block; /* Hiển thị logo như một khối nội tuyến */
+    margin-right: 10px; /* Điều chỉnh khoảng cách giữa logo và nav-links */
+}
+.nav-links {
+  display: flex; /* Sử dụng flexbox để bố trí */
+  list-style: none; /* Xóa bỏ các dấu đầu dòng mặc định */
+  margin: 0; /* Xóa bỏ khoảng lề mặc định */
+  padding: 0; /* Xóa bỏ khoảng đệm mặc định */
+}
+
+.nav-links li {
+  margin-left: 30px;
+   /* Thêm khoảng cách giữa các liên kết */
+}
+
+.nav-links a {
+  text-decoration: none; /* Xóa bỏ gạch chân mặc định */
+  color: #DDDDDD; /* Màu chữ xám đậm */
+  font-weight: 500; /* Font chữ hơi đậm */
+  font-size: 12px;
+}
+
+
+.additional-items {
+  display: flex; /* Sử dụng flexbox để bố trí */
+  margin-left: 30px; /* Thêm khoảng cách giữa nav-links và additional-items */
+}
+
+.item {
+  margin-left: 30px; /* Thêm khoảng cách giữa các biểu tượng */
+  color: #DDDDDD; /* Màu biểu tượng xám đậm */
+  font-size: 20px; 
+  text-decoration: none;
+}
+
+.item i {
+  font-size: 20px; /* Kích thước biểu tượng */
+  color: #DDDDDD; /* Màu biểu tượng xám đậm */
+}
+
+.img-responsive {
+  position: relative;
+  width: 100%; 
+  max-width: 1440.5px;
+  margin: auto; 
+  overflow: hidden;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+  padding-top: 50%; /* Giữ tỉ lệ 16:9 */
+  z-index: 1;
+}
+
+.img-responsive video {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  z-index: 1;
+}
+.hinh0 {
+  position: relative;
+}
+
+.hinh0 h2 {
+  font-size: 70px;
+  color: white;
+  position: absolute;
+  bottom: -400px;
+  left: 50%;
+  transform: translate(-50%, 0); 
+  z-index: 9999; 
+}
+
+.fade-out-text {
+  opacity: 1;
+  clip-path: inset(0% 0% 0% 0%);
+  transition: clip-path 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Tốc độ biến mất */
+}
+
+
+.fade-out-text.hidden {
+  opacity: 0;
+  clip-path: inset(0% 0% 0% 100%); /* Cắt phần tử từ trái sang phải */
+}
+.hinh1 {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  position: relative;
+  top: 0%;               
+  left: 50%;
+  transform: translate(-50%, -0%);
+  z-index: 2;
+}
+
+.text-hinh1 {
+  position: absolute; 
+  top: 30%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  text-align: center; 
+  z-index: 3; 
+}
+.text-hinh1,
+.button-container {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+.text-hinh1.visible,
+.button-container.visible {
+  opacity: 1; /* Fade in when the visible class is added */
+}
+.text-hinh1 h2 {
+  font-size: 55px;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #eec97e, #9198e5); 
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property */
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-hinh1 p {
+  font-size: 30px;
+  color: white;
+  white-space: nowrap;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 100px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 3; 
+}
+
+.button-container p {
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  margin: 15px;
+}
+
+.button {
+  border: none;
+  padding: 10px 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button1 {
+  background-color: rgba(0, 4, 255, 0);
+  color: rgb(131, 133, 247);
+  border: 1px solid rgb(131, 133, 247); 
+}
+
+.button1:hover {
+  background-color: rgb(131, 133, 247);
+  color: rgb(255, 255, 255);
+}
+
+/* Đảm bảo slider chiếm toàn bộ chiều rộng và chiều cao của container */
+.slider {
+  width: 1300px; 
+  max-width: 100vw; 
+  height: 700px; 
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  z-index: 2;
+  position: absolute;
+  top: 180%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hinh2 .h2-text {
+  margin-left: 80px; 
+  font-size: 50px;
+  color: #ddddddae;
+  margin-top: 80px;
+}
+/* Đặt danh sách các item của slider */
+.slider .list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+
+/* Đặt kích thước và căn chỉnh các item của slider */
+.slider .list .item {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative; /* Để các phần tử con tuyệt đối có thể căn chỉnh theo nó */
+}
+
+/* Đặt kích thước và kiểu hình ảnh trong slider */
+.slider .list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Đặt các chấm điều hướng slider */
+.slider .dots{
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.slider .dots li{
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.slider .dots li.active{
+  width: 30px;
+}
+
+/* Đặt kiểu dáng cho các phần tử điều khiển slider */
+.slider-controls button {
+  background-color: #21212189;
+  border: none;
+  width: 50px;
+  height: 40px;
+  margin: -4px 10px;
+  cursor: pointer;
+  border-radius: 32px;
+}
+
+/* Đặt kích thước và màu sắc cho biểu tượng trong nút điều khiển */
+#pauseBtn i {
+  font-size: 25px; /* Thay đổi kích thước biểu tượng */
+  color: white; /* Thay đổi màu sắc của biểu tượng */
+  transition: color 0.3s ease; /* Thay đổi màu sắc khi hover */
+}
+
+/* Đặt kiểu dáng và vị trí cho văn bản trong slider */
+.text-slider {
+  position: absolute;
+  width: 80%; /* Chiếm 80% chiều rộng của slider, điều chỉnh nếu cần */
+}
+
+/* Cụ thể cho từng vị trí */
+.text-slider.position1 {
+  bottom: 560px; 
+  left: 45%; 
+  transform: translateX(-50%);
+}
+
+.text-slider.position3 {
+  bottom: 560px; 
+  left: 45%; 
+  transform: translateX(-50%); 
+}
+.text-slider.position2 {
+  bottom: 500px; 
+  left: 105%; 
+  transform: translateX(-50%); 
+}
+.text-slider.position4 {
+  bottom: 500px; 
+  left: 45%; 
+  transform: translateX(-50%); 
+}
+.text-slider.position5 {
+  bottom: 560px; 
+  left: 45%; 
+  transform: translateX(-50%); 
+}
+/* Đặt kiểu dáng cho văn bản h2 trong slider */
+.text-slider h2 {
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+/* Media query cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .slider {
+    width: 100%;
+    height: 300px;
+  }
+
+  .slider .buttons button {
+    width: 40px;
+    height: 40px;
+  }
+}
+.h3-img{
+  width: 43%;
+  height: 700px;
+  object-fit: cover;
+  border: none;     
+  outline: none;
+  border-radius: 20px;
+  position: absolute;
+  top: 320%;                
+  left: 26.7%;               
+  transform: translate(-50%, -50%);
+}
+.h3-img1{
+  width: 43%;
+  height: 700px;
+  object-fit: cover;
+  border: none;     
+  outline: none;
+  border-radius: 20px;
+  position: absolute;
+  top: 320%;                
+  left: 73.5%;               
+  transform: translate(-50%, -50%);
+}
+.hinh3 h2{
+  font-size: 50px;
+  color: #ddddddae;
+  position: absolute;
+  top: 255%;                
+  left: 21.9%;               
+  transform: translate(-50%, -50%);
+}
+.hinh4 .h4-img{
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  border: none;     
+  outline: none;
+  border-radius: 20px;
+  position: absolute;
+  top: 470%;                
+  left: 50%;               
+  transform: translate(-50%, -50%);
+}
+.hinh4 .h4-text{
+  font-size: 50px;
+  color: #ddddddae;
+  position: absolute;
+  top: 398%;                
+  left: 18.9%;               
+  transform: translate(-50%, -50%);
+}
+.hinh4 .h4-text1{
+  font-size: 60px;
+  color: white;
+  position: absolute;
+  top: 430%;                
+  left: 50%;               
+  transform: translate(-50%, -50%);
+}
+.hinh5 img{
+  width: 60%;
+  height: 1100px;
+  object-fit: cover;
+  border: none;     
+  outline: none;
+  border-radius: 20px;
+  position: absolute;
+  top: 630%;                
+  left: 35%;               
+  transform: translate(-50%, -50%);
+}
+.hinh5 h2{
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  top: 558%;                
+  left: 65%;               
+  transform: translate(-50%, -50%);
+}
+.hinh5 p{
+  font-size: 20px;
+  color: #ddddddae;
+  position: absolute;
+  top: 590%;                
+  left: 68.5%;               
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.hinh5 samp{
+  color: white;
+}
+.hinh6 {
+  position: relative; /* Để định vị chính xác lớp nền */
+  width: 300px; /* Đặt kích thước container theo ý muốn */
+  height: 400px;
+  
+}
+
+.frame {
+  position: absolute;
+  top: 1005%; 
+  left: 0; 
+  width: 482%; /* Độ rộng của nền */
+  height: 900%; /* Chiều cao của nền */
+  display: flex;
+  justify-content: center; /* Căn chỉnh ngang */
+  align-items: center; /* Căn chỉnh dọc */
+  background-color: rgb(0, 0, 0); /* Màu nền đen với độ trong suốt 0.8 */
+ 
+}
+
+.frame .h6-img {
+  width: 1000px;
+  height: 1000px;
+  border-radius: 20px;
+  position: absolute;
+  top: 25%;                
+  left: 50%;               
+  transform: translate(-50%, -50%);
+}
+.frame .h6-text{
+  font-size: 70px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 5%;                
+  left: 50%;               
+  transform: translate(-50%, -50%);
+}
+.frame a{
+  font-size: 16px;
+  color: #ddddddae;
+  position: absolute;
+  top: 39.5%;                
+  left: 50%;               
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+}
+.frame a:hover,
+.frame a:active {
+  text-decoration: underline; 
+}
+.frame .h6-text1{
+  font-size: 20px;
+  text-align: center;
+  color: #ddddddae;
+  position: absolute;
+  top: 45%;                
+  left: 50%;               
+  transform: translate(-50%, -50%);
+}
+.frame .h6-text2,.h6-text3,.h6-text4,.h6-text5,.h6-text6,.h6-text7{
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  
+}
+.h6-text2{
+  position: absolute;
+  top: 50%;                
+  left: 25%;               
+  transform: translate(-50%, -50%);
+}
+.h6-text3{
+  position: absolute;
+  top: 50%;                
+  left: 50%;               
+  transform: translate(-50%, -50%);
+}
+.h6-text4{
+  position: absolute;
+  top: 50%;                
+  left: 75%;               
+  transform: translate(-50%, -50%);
+}
+.h6-text5{
+  position: absolute;
+  top: 54%;                
+  left: 25%;               
+  transform: translate(-50%, -50%);
+}
+.h6-text6{
+  position: absolute;
+  top: 54%;                
+  left: 50%;               
+  transform: translate(-50%, -50%);
+}
+.h6-text7{
+  position: absolute;
+  top: 54%;                
+  left: 75%;               
+  transform: translate(-50%, -50%);
+}
+.text2-samp,.text3-samp,.text4-samp,.text5-samp,.text6-samp,.text7-samp{
+  font-size: 30px;
+  font-weight: 900;
+}
+.text2-samp{
+  background: linear-gradient(to right, #fab52c, #7946e7);
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property */
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+}
+.text3-samp{
+  background: linear-gradient(to right, #f0c673, #a776df);
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property */
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+}
+.text4-samp{
+  background: linear-gradient(to right, #9500ff, #001aff);
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property */
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+}
+.text5-samp{
+  background: linear-gradient(to right, #dcf425, #93d725);
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property */
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+}
+.text6-samp{
+  background: linear-gradient(to right, #dcf425, #25d1d7);
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property */
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+}
+.text7-samp{
+  background: linear-gradient(to right, #3a88e1, #3a54e7);
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property */
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+}
+.frame1 {
+  position: absolute;
+  top: 1800%; 
+  left: 0; 
+  width: 482%; 
+  height: 100%; 
+  display: flex;
+  justify-content: center; /* Căn chỉnh ngang */
+  align-items: center; /* Căn chỉnh dọc */
+  background-color: rgb(0, 0, 0); /* Màu nền đen với độ trong suốt 0.8 */
+}
+.frame1 .video2{
+  width: 1300px;
+  height: 1300px;
+  border-radius: 20px;
+  position: absolute;
+  top: -150%;                
+  left: 50%;               
+  transform: translate(-50%, -50%); 
+}
+.frame1 .h6-text8{
+  font-size: 70px;
+  color: white;
+  position: absolute;
+  top: -80%;                
+  left: 35%;               
+  transform: translate(-50%, -50%); 
+}
+.frame1 .h6-text9{
+  font-size: 20px;
+  color: #ddddddae;
+  position: absolute;
+  top: 1%;                
+  left: 32%;               
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  line-height: 1.5;
+}
+.text9-samp{
+  color: white;
+  font-size: 20px;
+}
+.frame1 .h6-text10{
+  font-size: 20px;
+  color: #ddddddae;
+  position: absolute;
+  top: -31%;                
+  left: 65%;               
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.text10-samp{
+  color: white;
+  font-size: 50px;
+}
+.frame1 .h6-text11{
+  font-size: 20px;
+  color: #ddddddae;
+  position: absolute;
+  top: 10%;                
+  left: 66%;               
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.text11-samp{
+  color: white;
+  font-size: 50px;
+}
+.frame2{
+  position: absolute;
+  top: 1280%; 
+  left: 5%; 
+  width: 90%; 
+  height: 100%; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px; 
+}
+.hinh7 h2{
+  font-size:50px;
+  color: #ddddddae;
+  position: absolute;
+  top: 1260%; 
+  left: 5.5%;
+}
+.frame2 .h7-img {
+  width: 25%;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+}
+
+.frame2 .h7-img1 {
+  width: 25%;
+  position: absolute;
+  top: 10%;
+  left: calc(25% + 25% + 50px); 
+}
+.frame2 .h7-text1, .h7-text2 {
+  font-size: 14px;
+  color: #93d725;
+}
+
+.h7-text1 {
+  position: absolute;
+  top: 74%;
+  left: 37.6%;
+  transform: translate(-50%, -50%);
+}
+
+.h7-text2 {
+  position: absolute;
+  top: 74%;
+  left: 66.2%;
+  transform: translate(-50%, -50%);
+}
+.h7-text3,.h7-text4{
+ font-size: 30px;
+ color: white;
+ font-weight: 700;
+}
+.h7-text3{
+  position: absolute;
+  top: 78%;
+  left: 37.6%;
+  transform: translate(-50%, -50%);
+}
+.h7-text4{
+  position: absolute;
+  top: 78%;
+  left: 66.2%;
+  transform: translate(-50%, -50%);
+}
+.h7-text5 {
+  display: flex;
+  align-items: center; 
+  gap: 30px;
+  position: absolute;
+  top: 93%;
+  left: 37.6%;
+  transform: translate(-50%, -50%);
+}
+
+.h7-text5 a, .h7-text5 p {
+  margin: 0; 
+  font-size: 20px;
+}
+.h7-text5 a {
+  color: rgb(127, 76, 236); 
+  text-decoration: none; 
+}
+
+
+.h7-text5 a:hover,
+.h7-text5 a:active {
+  text-decoration: underline; 
+}
+
+.h7-text5 p{
+  color: #ddddddae;
+}
+
+.h7-text6{
+  display: flex;
+  align-items: center; 
+  gap: 30px;
+  position: absolute;
+  top: 93%;
+  left:  64.5%;
+  transform: translate(-50%, -50%);
+}
+.h7-text6 a ,.h7-text6 .button2{
+  font-size: 20px;
+  margin: 0;
+}
+.h7-text6 a {
+  color: rgb(127, 76, 236); 
+  text-decoration: none; 
+}
+
+
+.h7-text6 a:hover,
+.h7-text6 a:active {
+  text-decoration: underline; 
+}
+
+.button2 {
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.button4 {
+  background-color: rgb(131, 133, 247);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0); 
+}
+.footer{
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  position: absolute;  
+  top: 1480%;               
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hinh15{
+  border: 2px solid #121212ce;
+  padding: 0 0 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212ce;
+}
+.end-text-w {
+  display: flex;
+  justify-content: flex-start;    
+  align-items: center; 
+  white-space: nowrap; 
+  margin: 0;
+  font-size: 14px;
+  position: absolute;  
+  top: 13%;               
+  left: 31%;
+  transform: translate(-50%, -50%);
+}
+.end-text-w a{
+  text-decoration: none;
+  color: white; 
+}
+.end-text-w a:hover {
+  text-decoration: underline; 
+  color: white; 
+}
+.end-text-w  .b3{
+  color: white; 
+}
+.end-text-w .i{
+  margin-top: 200px;
+}
+.end-text-w .b5, 
+.end-text-w .b, 
+.end-text-w .b2 {
+  margin: 0 6px;
+}
+
+.end-text-w .b1,
+.end-text-w .b3,
+.end-text-w .b4 {
+  margin: 3px;
+}
+
+.kb-container {
+  display: flex; 
+  height: 200px;
+  margin-top: 140px; 
+  margin-left: -285px;
+}
+
+
+.account h2,
+.store h2,
+.business-education-healthcare h2,
+.business-education-healthcare h3,
+.business-education-healthcare h4,
+.business-education-healthcare h5,
+.values-about h2,
+.values-about h3 {
+font-size: 14px;
+
+}
+
+.account h3{
+font-size: 14px;
+}
+
+
+.account ul,
+.store ul,
+.business-education-healthcare ul,
+.values-about ul {
+list-style-type: none;
+padding: 0;
+margin: 10px;
+}
+
+
+.account ul li ,
+.store ul li,
+.business-education-healthcare ul li,
+.values-about ul li {
+font-size: 13px;
+margin-bottom: 20px;
+
+}
+
+
+.account ul li a,
+.store ul li a,
+.business-education-healthcare ul li a,
+.values-about ul li a {
+text-decoration: none; 
+}
+
+
+.account ul li:hover a,
+.store ul li:hover a,
+.business-education-healthcare ul li:hover a,
+.values-about ul li:hover a {
+text-decoration: underline; 
+}
+.account, .store, .business-education-healthcare, .values-about {
+  position: absolute;
+  max-width: 500px; 
+  text-align: justify;
+  height: 453.7px; 
+  color: white;
+}
+
+.account {
+  left: 25%; 
+}
+
+.store {
+  left: 40%; 
+}
+
+.business-education-healthcare {
+  left: 55%; 
+}
+
+.values-about {
+  left: 70%; 
+}
+.account a,.store a,.business-education-healthcare a,.values-about a{
+  color: #ddddddae;
+}
