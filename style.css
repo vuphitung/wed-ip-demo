@@ -332,6 +332,11 @@ body {
   height: 800px;
   object-fit: cover;
 }
+.custom-divider {
+  height: 50px; /* Adjust the height as needed */
+  background-color: #000000; /* Adjust the color as needed */
+  margin:0; /* Add top and bottom margin for extra spacing */
+}
 .hinh6 {
   position: relative; 
   display: inline-block;
